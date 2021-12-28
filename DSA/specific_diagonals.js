@@ -37,7 +37,7 @@ function runProgram(input){
 }         
          
 
-if (process.env.USERNAME == "THIS-PC"){
+if (process.env.USERNAME == "satwi"){
     runProgram(`
     3 3
 1 2 3

@@ -1,40 +1,42 @@
-a= '3aabacbebebe';
-n = +a.slice(0,1);
-str = a.slice(1,a.length);
-// console.log(n,str);
-obj = {a:1,b:2,c:2,d:4},
-console.log(Object.keys(obj).length);
-for(let i=0;i<str.length;i++){
-    let dist = {};
-    for(let j=i+1;j<str.length;j++){
-        let target = str.slice(i,j+1) 
-    }
-}
-// let a = "abcabc"
-// function reduce(a){
-//     for(let i=0;i<a.length-1;i++){
-//         if(replace_check(a.slice(i,i+2))==-1){
+// let str = "ab"
+// console.log(str.charCodeAt(1)-96);
+
+
+// console.log(''.localeCompare('bca'));
+// console.log('abcde'.substring(1));
+// console.log(null==undefined);
+// function ChangingSequence(arr){
+//     let truth = arr[0] < arr[1];
+//     for(let i=0;i<arr.length-1;i++){
+//         if((arr[i]<arr[i+1])==truth){
 //             continue
-//         }else{
-//             a=a.replace(a.slice(i,i+2),replace_check(a.slice(i,i+2)))
-//             return reduce(a);
 //         }
-//     }
-//     return a.length;
-// }
-// function replace_check(str){
-//     if(str=="ab"|| str=="ba"){
-//         return "c"
-//     }
-//     if(str=="cb"|| str=="bc"){
-//         return "a"
-//     }
-//     if(str=="ac"|| str=="ca"){
-//         return "b"
+//         else{
+//             return i
+//         }
 //     }
 //     return -1
 // }
-// console.log(reduce(a));
-// a.replace('ab','z');
-// console.log(a);
+// console.log(ChangingSequence([-4,-2,9,10]));
+// console.log(['1','2','15','-7','300'].sort());
 
+// const promises = [3,2,1].map(d=>(
+//     new Promise(resolve=>{
+//         setTimeout(()=>{
+//             resolve(d)
+//         },d*1000)
+//     })
+// ))
+// Promise.race(promises).then((val)=>{
+//     console.log(val);
+// })
+// const f = n => n <=1?1:n*f(n-1);
+// console.log(f(4));
+function func(a,b){
+    a+=1;
+    b.push(1)
+}
+const a = 0;
+const b = [];
+func(a,b);
+console.log(a,b);

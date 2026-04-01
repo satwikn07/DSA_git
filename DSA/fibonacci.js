@@ -17,7 +17,7 @@ function runProgram(input){
     console.log(fibonacci(n));
 }
 
-if (process.env.USERNAME == "THIS-PC"){
+if (process.env.USERNAME == "satwi"){
     runProgram(`
     4
 `);

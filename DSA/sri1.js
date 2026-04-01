@@ -24,10 +24,46 @@
 //     c = (1+11)&b
 // }
 // console.log(a+b+c);
-let p=5,q=5,r=10;
-q = r + p;
-if((r**q**7)<(q**p**3)){
-    r = (r+r)+r;
-    p = (q&2)+q
+// let p=5,q=5,r=10;
+// q = r + p;
+// if((r**q**7)<(q**p**3)){
+//     r = (r+r)+r;
+//     p = (q&2)+q
+// }
+// console.log(p+q+r);
+function isValid(s) {
+    // Write your code here
+    let myObj = {}
+    for(let i=0;i<s.length;i++){
+        if(myObj[s[i]]){
+            myObj[s[i]] = myObj[s[i]] + 1;
+        }else{
+            myObj[s[i]] = 1;
+        }
+    }
+    // console.log(myObj)
+    let prevValue = 0;
+    let ans = "YES";
+    let j = 0;
+    for(let keys in myObj){
+        if(!prevValue){
+            prevValue = myObj[keys];
+        }else{
+            if(prevValue != myObj[keys]){
+              if(prevValue == myObj[keys]+1 || prevValue == myObj[keys]-1){
+                    j +=1;
+                }
+                else{
+                    ans = "NO"
+                }
+            }else{
+                prevValue = myObj[keys];
+            }
+        }
+    }
+    if(j>1){
+        ans = "NO"
+    }
+    console.log(ans);
 }
-console.log(p+q+r);
+isValid('abbcc')
